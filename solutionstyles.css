@@ -1,0 +1,152 @@
+/* Container for the navigation bar with a light green background */
+.navbar-container {
+    background-color: #8bc34a;
+    padding: 10px 0;
+}
+
+.logo img {
+    height: 70px;
+    float:  left;
+}
+
+/* Non-navigation section styles */
+.non-nav {
+    position: relative;
+    color: black;
+    width: 100%;
+    height: 100vh
+}
+
+.navbar .nav-item {
+    padding: 10px;
+}
+
+/* Parallax background styles */
+.parallax-bg {
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Banner section styles */
+#banner .container {
+    background-color: #c3d9a1; /* Comment out if not needed */
+    border-radius: 20px;
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    padding-left:5% ;
+    padding-right:5% ;
+}
+
+#banner .banner-title {
+    font-weight: 600;
+    font-size: 40px;
+    margin-top: 5px;
+}
+.image-details{
+    padding-left: 100px;
+}
+#banner .text {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.bannermain
+{
+    margin-bottom: 5px;
+}
+/*-------- Search Button --------*/
+
+.searchname-button{
+    color: white;
+    height: 50px;
+    width: 200px; 
+    border-radius: 20px;
+    font-size: large;
+    background-color: black;
+}
+.searchdiseasename-button {
+    color: white;
+    height: 50px;
+    width: 200px; s
+    border-radius: 20px;
+    font-size: large;
+    background-color: black;
+
+}
+.searchbyname{
+    padding: 5px;
+    border-color: black;
+    margin: auto;
+}
+.searchbyimage{
+    padding: 5px;
+    border-color: black;
+    margin: auto;
+}
+.searchbydisease{
+    padding: 5px;
+    border-color: black;
+    margin: auto
+}
+
+
+.search-text{
+   padding-top: 5px;
+}
+.search-name {
+     height: 20px; 
+     width: 100px;
+     background-color: #D9D9D9 ;
+     color: black;
+}
+
+.search{
+    padding: 5px;
+    border-color: black;
+    border-radius: 5px;
+    margin: auto;
+    margin: 5px;
+
+}
+
+.search-disease{
+    padding: 4px;
+    border-color: black;
+    border-radius: 5px;
+    margin: auto;
+    margin: 5px;
+}
+
+.inputimage{
+
+    color:black ;
+    height: 34px;
+    width: 250px;
+    border-radius: 20px;
+    font-size: large;
+    background-color:white ;
+    padding: 1px;
+
+}
+.submit-imagebar{
+    height: 50px; 
+    margin-top: 25px; 
+    color: white;
+    width: 200px; 
+    border-radius: 20px;
+    font-size: large;
+    background-color: black;
+}
+
+
+#banner .container .row .btn {
+    background-color: #a1d035;
+    /* border-color: ; */
+}

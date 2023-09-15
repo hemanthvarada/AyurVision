@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solution</title>
+    <link rel="stylesheet" href="solutionstyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" 
+    crossorigin="anonymous">
+</head>
+<body>
+    
+
+
+    <!-- Banner Section -->
+    <section id="banner">
+
+        <div class="container">
+           
+            <nav class="navbar navbar-expand-lg " > <!--fixed-top-->
+                <div class="container-fluid">
+                    <div class="logo" style="width: 20px; padding-top: 10px;">
+                       <a   class="border-dark" href=""> <img src="./images/ayurvision3.png" alt="logo"> </a>
+                    </div>
+                  <button class="navbar-toggler hover-light " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 "> 
+                        <!-- ms-auto is for making these buttons to right  --> 
+                      <li class="nav-item">
+                        <a class="nav-link active text-dark fs-5 fw-bold" href="index.html">   Home   </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active  text-dark fs-5 fw-bold " href="index.html">   AboutUs   </a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link active text-dark fs-5 fw-bold " href="index.html">   How it Works   </a>
+                      </li>  
+                      <li class="nav-item ">
+                        <a class="nav-link active text-dark fs-5 fw-bold" href="index.html">   FAQs   </a>
+                      </li> 
+                      <li class="nav-item">
+                        <a class="nav-link active text-dark  fs-5 fw-bold" href="index.html">  ContactUs  </a>
+                      </li> 
+                  </div>
+                </div>
+              </nav>
+        
+            <div class="row bannermain">
+                <div class="col-md-12 col-lg-12">
+                    <p class="banner-title text-center">Try AyurVision Now!</p>
+               </div>
+           </div>
+
+            <div class="row">
+                         <div style="margin-left: 75px;" class=" search text-center col-md-12 col-lg-5 border border-dark border-2 ">
+                         <div class="form-outline text-center">
+                         <h3 class="search-text">Search by PlantName</h3>
+                          <input type="text" id="form" class="form-control col-md-6" />
+                          <label class="form-label" for="form"></label>
+                      <h1>
+                           <button class="searchname-button " data-bs-toggle="modal" data-bs-target="#searchname" >Submit </button>   
+
+  
+                               <!-- Modal -->
+                         <div class="modal fade modal-lg " id="searchname" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="searchnameLabel" aria-hidden="true">
+                             <div class="modal-dialog">
+                             <div class="modal-content">
+                             <div class="modal-header">
+                                <h5 class="modal-title" id="searchnameLabel">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                               </div>
+                              <div class="modal-body">
+                              </div>
+                               <div class="modal-footer">
+                                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              </div>
+                              </div>
+                              </div>
+                          </div>
+                      </h1>
+                 </div>
+             </div>
+           
+
+             <div class=" search-disease text-center col-md-12 col-lg-5 border border-dark border-2 ">
+                   <div class="form-outline text-center">
+                       <h3 class="search-text">Search by DiseaseName</h3>
+                        <input type="text" id="form" class="form-control col-md-6" />
+                        <label class="form-label" for="form"></label>
+                         <h1>
+
+
+                        <button class="searchdiseasename-button " data-bs-toggle="modal" data-bs-target="#searchdiseasename" >Submit</button>   
+
+  
+                        <!-- Modal -->
+                          <div class="modal fade modal-lg " id="searchdiseasename" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="searchdiseasenameLabel" aria-hidden="true">
+                         <div class="modal-dialog">
+                               <div class="modal-content">
+                              <div class="modal-header">
+                               <h5 class="modal-title" id="searchdiseasenameLabel">Modal title</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                         </div>
+                     <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                       </div>
+                      </div>
+                      </div>
+
+                     </div>
+                       </h1>
+               </div>
+          </div>
+
+          <div class="row">
+             <div style="margin-top:25px;" class="search search-image col-md-12 col-lg-12 text-center border border-dark border-2 ">
+                     <!-- Image Upload Form -->
+                      <h3 class="search-text">Search by Image </h3> 
+                      <input class="inputimage" type="file" name="image" accept="image/*" required >
+
+                      <img  id="selected-image" src="#" alt="Selected Image" style="display: none; margin-top: 10px; margin-left: 20% ; margin-right: 20px; max-width: 200px; max-height: 300px; margin-bottom: 50px;">
+                     <form action="/process_image" method="POST" enctype="multipart/form-data">
+ 
+
+                         <button style=" color: white;
+                         height: 50px;
+                         width: 200px; 
+                         border-radius: 20px;
+                         font-size: large;
+                         background-color: black;" class="searchimage-button " data-bs-toggle="modal" data-bs-target="#searchimage" > Submit </button>   
+
+
+                         <!-- Modal -->
+                         <div class="modal fade modal-lg " id="searchimage" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="searchimageLabel" aria-hidden="true">
+                         <div class="modal-dialog">
+                         <div class="modal-content">
+                         <div class="modal-header">
+                          <h5 class="modal-title" id="searchimageLabel">Modal title</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                         </div>
+                         <div class="modal-body">
+                         </div>
+                         <div class="modal-footer">
+                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                         </div>
+                         </div>
+                         </div>
+                         </div>
+
+
+
+
+
+                         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+                         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
+                          crossorigin="anonymous"></script>
+                          <!-- JavaScript to display the image -->
+                           <script>
+                             function displayImage(input) {
+                              var selectedImage = document.getElementById('selected-image');
+                             if (input.files && input.files[0]) {
+                                var reader = new FileReader();
+                               reader.onload = function(e) {
+                                selectedImage.style.display = 'block';
+                                selectedImage.src = e.target.result;
+                               };
+                              reader.readAsDataURL(input.files[0]);
+                               }
+                               }
+
+                               // Attach the function to the file input's change event
+                                var fileInput = document.querySelector('input[type="file"]');
+                               fileInput.addEventListener('change', function() {
+                                displayImage(this);
+                               });
+                          </script>
+                           <!-- Submit button to upload and process the image -->
+                       </form>     
+                   </div>
+               </div>
+
+              
+
+               <!-- <div class="col-lg-7  solutionforimage ">
+                  <p class="text text-center  ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat tellus diam, quis condimentum sapien laoreet a.
+                     Quisque mollis ligula urna, eget sollicitudin erat gravida id. Phasellus dignissim efficitur egestas. Integer consequat dignissim augue vitae tempus. 
+                     Nullam quis interdum tortor, sed ultricies lorem. Donec dictum odio non augue dapibus porttitor. Maecenas dapibus egestas leo luctus convallis. interdum
+                     tortor, sed ultricies lorem. Donec dictum odio non augue dapibus porttitor. Maecenas dapibus egestas leo luctus convallis
+                     <div class="image-details"></div>
+                        <h5>CARE OF PLANT:</h5>
+                        <h5>SYMPTOMS:</h5>
+                        <h5> NOT USE:</h5>
+                        <h5>SIMILAR PLANTS:</h5>
+                        <h5>BUY FROM US:</h5>
+                   </p>
+               </div>      -->
+           </div>
+
+
+
+            <!-- <div class="row">
+               <div class=" searchbyname col-md-12 col-lg-5 border border-dark border-2 ">
+                    <div class="form-outline text-center">
+                        <h3 class="search-text">Search by PlantName</h3>
+                        <input type="text" id="form" class="form-control col-md-6" />
+                        <label class="form-label" for="form"></label>
+                        <h1>
+                            <button class="search-button">Submit</button>
+                        </h1>
+                    </div>
+              </div> 
+              <p class="text text-center col-lg-12 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat tellus diam, quis condimentum sapien laoreet a.
+                Quisque mollis ligula urna, eget sollicitudin erat gravida id. Phasellus dignissim efficitur egestas. Integer consequat dignissim augue vitae tempus. 
+                Nullam quis interdum tortor, sed ultricies lorem. Donec dictum odio non augue dapibus porttitor. Maecenas dapibus egestas leo luctus convallis. interdum
+                 tortor, sed ultricies lorem. Donec dictum odio non augue dapibus porttitor. Maecenas dapibus egestas leo luctus convallis
+              </p>
+            </div> -->
+
+
+            <!-- <div class="row">
+              <div class=" searchbyname col-md-12 col-lg-5 border border-dark border-2 ">
+                      <div class="form-outline text-center">
+                          <h3 class="search-text">Search by DiseaseName</h3>
+                          <input type="text" id="form" class="form-control col-md-6" />
+                          <label class="form-label" for="form"></label>
+                          <h1>
+                              <button class="search-button">Submit</button>
+                          </h1>
+                      </div> 
+                </div> 
+                <p class="text text-center col-lg-7 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat tellus diam, quis condimentum sapien laoreet a.
+                  Quisque mollis ligula urna, eget sollicitudin erat gravida id. Phasellus dignissim efficitur egestas. Integer consequat dignissim augue vitae tempus. 
+                  Nullam quis interdum tortor, sed ultricies lorem. Donec dictum odio non augue dapibus porttitor. Maecenas dapibus egestas leo luctus convallis. interdum
+                   tortor, sed ultricies lorem. Donec dictum odio non augue dapibus porttitor. Maecenas dapibus egestas leo luctus convallis
+                </p>
+              </div> -->
+
+
+
+        </div>
+   </section>
+
+
+ <div class="parallax-bg"></div>
+</body>
+</html>
